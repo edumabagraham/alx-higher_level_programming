@@ -10,8 +10,6 @@ def remove_char_at(str, n):
         new_string = str.replace(char, "", 1)
     return new_string
 
-
-
 # def remove_char_at(str, n):
 #     new_string = ""
 
