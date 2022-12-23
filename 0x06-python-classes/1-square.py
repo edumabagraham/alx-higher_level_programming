@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Square related feature module."""
+
 
 class Square:
     """
