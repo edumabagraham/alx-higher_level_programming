@@ -13,6 +13,10 @@ class Square:
     -------
     size: int
     the size of the square
+
+    Methods
+    -------
+    area: returns the area of the square
     """
 
     def __init__(self, size=0):
