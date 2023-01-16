@@ -1,17 +1,34 @@
 #!/usr/bin/python3
 
+"""Singly linked list"""
+
+
 class Node:
     """
-    Blueprint for a Node in a linked-list
+    This class represents a node
 
     Attributes
     ----------
-    data: int
-    next_node: Node
+    data : int
+    data in the node
+
+    next_node : None or a Node
+    points to the next node in the linked list
     """
+
+    def __init__(self, data, next_node=None):
+        """
+        Instantiates the data and
+        next_node fields
+        """
+        self.data = data
+        self.next_node = next_node
 
     @property
     def data(self):
+        """
+        Getter
+        """
         return self.__data
 
     @data.setter
@@ -27,51 +44,48 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
-        if value is not None and type(value) is not Node:
+        if type(value) is not Node and value is not None:
             raise TypeError("next_node must be a Node object")
         else:
             self.__next_node = value
 
-    def __init__(self, data, next_node=None):
-        self.data = data
-        self.next_node = next_node
-
 
 class SinglyLinkedList:
     """
-    Attributes
-    ----------
-    head: Node
-    head node of the linked-list
+    This class represents a Singly
+    linked list
     """
-
     def __init__(self):
+        """
+        Attributes
+        ----------
+        head : Node
+        head node of the linked list
+        """
         self.__head = None
 
     def __str__(self):
         """
-        Prints the linked-list
-        with the help of the __str__
-        helper function
+        String representation of singly
+        linked list for printing
         """
         string = ""
         temp = self.__head
-
         while temp is not None:
             string += str(temp.data)
             temp = temp.next_node
-
             if temp is not None:
                 string += "\n"
-
         return string
 
     def sorted_insert(self, value):
         """
-        Inserts a new value into a sorted
-        linked-list
+        Adds new node to a sorted linked
+        list
+        Attributes
+        ----------
+        data of the new node
         """
-
         new_node = Node(value)
 
         if self.__head is None:
