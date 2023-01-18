@@ -113,5 +113,5 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Deletes a Rectangle instance."""
+        """Prints statement when a Rectangle instance is deleted"""
         print("Bye rectangle...")
