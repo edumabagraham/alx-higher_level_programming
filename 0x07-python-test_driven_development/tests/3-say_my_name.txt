@@ -1,0 +1,34 @@
+===============================
+Test cases for 3-say_my_name.py
+===============================
+
+This module contains a function that prints
+My name is <first name> <last name>
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Documentation
+=============
+Check if our modules and functions are documented.
+    >>> module_doc = __import__('3-say_my_name').__doc__
+    >>> print(len(module_doc) > 0)
+    True
+
+    >>> function_doc = __import__('3-say_my_name').say_my_name.__doc__
+    >>> print(len(function_doc) > 0)
+    True
+
+General tests
+-------------
+
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+    >>> say_my_name("Bob")
+    My name is Bob 
+
+    >> say_my_name(12, "White")
+    first_name must be a string
+
+    >> say_my_name("Bob", 13)
+    last_name must be a string
