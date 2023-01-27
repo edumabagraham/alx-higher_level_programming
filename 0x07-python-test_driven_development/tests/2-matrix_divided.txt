@@ -7,6 +7,7 @@ The list must have same size, and each element must be int or
 float, div argument must be int and not 0
 
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
 
 Documentation
 =============
@@ -39,6 +40,21 @@ General tests
     >>> matrix = [[7, -8, 4.9], [9.3,78,-3.2]]
     >>> matrix_divided(matrix, -9)
     [[-0.78, 0.89, -0.54], [-1.03, -8.67, 0.36]]
+
+    >>> matrix_divided([[3]], 5)
+    [[0.6]]
+
+    >>> matrix_divided([[3],[6]], 5)
+    [[0.6], [1.2]]
+
+    >>> matrix_divided([[-14],[-13]], -5)
+    [[2.8], [2.6]]
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]] , 10 - 5)
+    [[0.2, 0.4, 0.6], [0.8, 1.0, 1.2]]
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]] , -100000)
+    [[-0.0, -0.0, -0.0], [-0.0, -0.0, -0.0]]
 
 
 Division by 0

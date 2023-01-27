@@ -55,6 +55,8 @@ matrix_divided = __import__('2-matrix_divided').matrix_divided
 # print(matrix)
 
 print("--------------------------")
-matrix = [[1, 3, 4], [1, 2, 3]]
-print(matrix_divided(matrix, 16))
+matrix = [[1, 2, 3], [4, 5, 6]]
+print(matrix_divided(matrix , 10 - 5))
 print(matrix)
+
+print(matrix_divided([[-14],[-13]], -5))
